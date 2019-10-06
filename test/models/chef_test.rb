@@ -48,11 +48,11 @@ class ChefTest < ActiveSupport::TestCase
                         joe@foo+bar.com]
     invalid_emails.each do |invalids|
       @chef.email = invalids
-      assert_not @chef.valid?, "{#invalids.inspect} should not be valid"
+      assert_not @chef.valid?, "#{invalids.inspect} should not be valid"
     end
   end
   
-  test "email should be uniqueand case insensitive" do
+  test "email should be unique and case insensitive" do
     duplicate_chef = @chef.dup
     duplicate_chef.email = @chef.email.upcase
     @chef.save
