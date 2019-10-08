@@ -1,5 +1,5 @@
 class Chef < ApplicationRecord
-  before_save :downcase_email
+  before_save :downcase_email, :chefname_format
   
   validates :chefname, presence: true, length: { maximum: 30 }
   VALID_EMAIL_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
@@ -11,4 +11,8 @@ class Chef < ApplicationRecord
     def downcase_email
       self.email = email.downcase
     end
+    
+    def chefname_format
+      self.chefname = chefname.split.map(&:capitalize)*' '
+    end      
 end
