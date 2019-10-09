@@ -5,6 +5,8 @@ class Recipe < ApplicationRecord
   validates :description, length: { minimum: 5, maximum: 500 }
   belongs_to :chef
   
+  default_scope -> {order(updated_at: :desc)}
+  
   private
   
     def name_format

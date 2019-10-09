@@ -25,7 +25,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
+#  a simple API for performing paginated queries with Active Record
+gem 'will_paginate', '~> 3.2'
+# format the html to match Twitter Bootstrap styling
+gem 'bootstrap-will_paginate', '~> 1.0'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
