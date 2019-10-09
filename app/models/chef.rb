@@ -7,7 +7,7 @@ class Chef < ApplicationRecord
                                     length: { maximum: 255 },
                                     format: { with: VALID_EMAIL_REGEX }
   validates :password, presence: true, length: { minimum: 5 }, allow_nil: true
-  has_many :recipes
+  has_many :recipes, dependent: :destroy
   has_secure_password
   
   private
