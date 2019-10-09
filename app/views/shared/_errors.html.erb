@@ -8,7 +8,7 @@
             <%= obj.class.to_s.downcase %> from being saved:
           </h2>
           <div class="panel-body">
-            <ul class="list-unstylized">
+            <ul class="list-unstyled">
               <% obj.errors.full_messages.each do |msg| %>
               <li><%= msg %></li>
               <% end %>

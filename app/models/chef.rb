@@ -6,7 +6,10 @@ class Chef < ApplicationRecord
   validates :email, presence: true, uniqueness: { case_sensitive: false },
                                     length: { maximum: 255 },
                                     format: { with: VALID_EMAIL_REGEX }
+  validates :password, presence: true, length: { minimum: 5 }
   has_many :recipes
+  has_secure_password
+  
   private
     def downcase_email
       self.email = email.downcase
@@ -14,5 +17,6 @@ class Chef < ApplicationRecord
     
     def chefname_format
       self.chefname = chefname.split.map(&:capitalize)*' '
-    end      
+    end
+    
 end
