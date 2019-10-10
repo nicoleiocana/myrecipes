@@ -133,3 +133,12 @@ footer {
   font-weight: bold;
   font-size: 1.25em;
 }
+
+.jumbotron .btn-danger {
+  border-color: white;
+  &:hover, &:active {
+    border-color: white;
+    background-color: #073b15;
+    opacity: 0.5;
+  }
+} 
