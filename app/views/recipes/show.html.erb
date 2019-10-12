@@ -4,12 +4,15 @@
   <hr>
   <%= simple_format(@recipe.description) %>
   <hr>
+  <% if @recipe.ingredients.any? %>
+    <p>Ingredients: <%= render @recipe.ingredients %></p>
+  <% end %>
   <div>
     <p class="text-center">
       <em>Created by:</em>
     </p>
      <p class="text-center">
-       <small><%= link_to gravatar_for(@recipe.chef), recipes_path %></small>
+       <small><%= link_to gravatar_for(@recipe.chef), chef_path(@recipe.chef) %></small>
      </p>
      <p class="text-center">
        <small><%= @recipe.chef.chefname %></small> | <%= time_ago_in_words(@recipe.created_at) %> ago
