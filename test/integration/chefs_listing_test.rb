@@ -8,7 +8,8 @@ class ChefsListingTest < ActionDispatch::IntegrationTest
                             password_confirmation: "password")
     @chef2 = Chef.create!(chefname: "newchef2", email: "newchef2@example.com",
                                              password: "password",
-                                password_confirmation: "password")
+                                password_confirmation: "password",
+                                                admin: true)
   end
   
   test "should get chefs listing" do
@@ -23,7 +24,7 @@ class ChefsListingTest < ActionDispatch::IntegrationTest
     get chefs_path
     assert_template 'chefs/index'
     assert_difference "Chef.count", -1 do
-      delete chef_path(@chef2)
+      delete chef_path(@chef)
     end
     assert_redirected_to chefs_path
     assert_not flash.empty?  
