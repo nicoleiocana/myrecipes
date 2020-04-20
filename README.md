@@ -1,24 +1,61 @@
-# README
+# Myrecipes Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+_The best recipe sharing app!_ Myrecipes website created from
+[Udemy's The Professional Ruby on Rails Developer with Rails 5](https://www.udemy.com/course/pro-ruby-on-rails-rails5/)
+by Mashrur Hossain and Rob Percival. Additional components were added to the application:
+likes functionality and images integration. This social experience capitalizes on
+**ActionCable** with realtime features such as a chatroom and comments. Test Driven
+Development (TDD) is implemented throughout the site building process. Other notable features:
+* an authentication system built from scratch
+* user interface (UI) styled with Bootstrap
+* file/image hosting from Amazon Web Services (AWS)
+* [Gravatars](https://en.gravatar.com/)
+* model and non-model backed forms
+* one-to-many and many-to-many associations at the database layer
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+1\. Clone the repo.
 
-* System dependencies
+![clone repo](https://i.imgur.com/VQSm78b.png)
 
-* Configuration
+2\. Install the needed gems:
 
-* Database creation
+```
+$ bundle install --without production
+```
 
-* Database initialization
+3\. Migrate the database:
 
-* How to run the test suite
+```
+$ rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+4\. Verify all tests pass:
 
-* Deployment instructions
+```
+$ rails test
+```
 
-* ...
+5\. Run the app on http://localhost:3000. 
+
+```
+$ rails s
+```
+
+-----
+
+## Screenshots
+
+Desktop:
+
+
+
+Mobile:
+
+
+
+-----
+
+### Screen Capture
+
