@@ -49,13 +49,14 @@ $ rails s
 
 Desktop:
 
-
+![desktop myrecipes](https://i.imgur.com/1k2dN2X.png)
 
 Mobile:
 
-
+![mobile myrecipes](https://i.imgur.com/A5IrY8x.png)
 
 -----
 
 ### Screen Capture
 
+![chefchat demo](https://i.imgur.com/q05S2wz.gif)
