@@ -49,11 +49,11 @@ $ rails s
 
 Desktop:
 
-![desktop myrecipes](https://i.imgur.com/1k2dN2X.png)
+![desktop myrecipes](https://i.imgur.com/vA4AwMi.png)
 
 Mobile:
 
-![mobile myrecipes](https://i.imgur.com/A5IrY8x.png)
+![mobile myrecipes](https://i.imgur.com/8HvxjTq.png)
 
 -----
 
