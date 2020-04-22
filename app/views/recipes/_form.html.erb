@@ -1,4 +1,4 @@
-<%= form_for @recipe, html: {class:'form-horizontal'} do |f| %>
+<%= form_for(@recipe, :html => {class:'form-horizontal', multipart: true, role: 'form'}) do |f| %>
   <div class="form-group">
       <%= f.label :name, class:"control-label col-md-2" %>
       <div class="col-md-8">
@@ -19,6 +19,12 @@
     </div>
   </div>
   <div class="form-group">
+    <%= f.label :image, "Add Image", class: 'control-label col-md-2' %>
+    <div class="col-md-8">
+      <%= f.file_field :image, accept: "image/jpeg, image/gif, image/png" %>
+    </div>
+  </div>
+  <div class="form-group">
     <div class="col-md-offset-2 col-md-8">
       <%= f.submit class:'btn btn-primary btn-lg btn-xlg' %>
     </div>
@@ -28,3 +34,12 @@
   [<%= link_to "Cancel request and return to recipes listing", recipes_path %>]
 </div>
 
+<script type="text/javascript">
+  $("#recipe_image").bind("change", function() {
+    const size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert("Maximum file size is 5MB. Please choose a smaller file.");
+      $("#recipe_image").val("");
+    }
+  });
+</script>

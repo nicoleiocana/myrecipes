@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
       # redirect_to @recipe
     else
       flash[:danger] = "Comment was not created"
-      redirect_back(fallback_location: root_path)
+      redirect_to request.referrer
     end
   end
   

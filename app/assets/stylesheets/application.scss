@@ -91,10 +91,6 @@ footer {
   margin-top: 0;
 }
 
-/*.well {
-  margin-bottom: 10px;
-}*/
-
 .well a {
   color: #073b15;
 }
@@ -113,6 +109,10 @@ footer {
   a {
     color: white;
   }
+}
+
+.liking {
+  padding-right: 10px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -192,4 +192,19 @@ footer {
 #comment_well {
   margin-top: 10px;
   margin-bottom: 0;
+}
+
+/*********************
+*** Fixes ***********
+**********************/
+.form-horizontal .control-label {
+  padding-top: 0;
+}
+
+/*.well {
+  margin-bottom: 10px;
+}*/
+
+.custom-image-style {
+  padding-bottom: 20px;
 }
