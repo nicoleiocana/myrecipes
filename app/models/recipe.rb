@@ -12,7 +12,7 @@ class Recipe < ApplicationRecord
   
   validates :name, :description, :chef_id, presence: true
   validates :description, length: { minimum: 5, maximum: 500 }
-  validates :image, attached: true, content_type: { in: %w[image/jpeg image/gif image/png],
+  validates :image, content_type: { in: %w[image/jpeg image/gif image/png],
                                                     message: "must be a valid image format" },
                                     size: { less_than: 5.megabytes,
                                             message: "should be less than 5MB" }
