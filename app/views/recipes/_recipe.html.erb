@@ -5,7 +5,10 @@
         <%= gravatar_for(recipe.chef, size:120) %>
       </section>
     </div>
-    <div class="col-md-8 well">
+    <div class="col-md-10 well">
+      <div class="pull-right">
+        <%= image_tag(recipe.image, size: "150x100") if recipe.image.attached? %>
+      </div>
       <h4><%= link_to recipe.name, recipe_path(id: recipe.id) %></h4>
       <p><%= truncate(recipe.description, length: 150) %></p>
       <% if recipe.ingredients.any? %>
@@ -34,9 +37,6 @@
           <% end %> <%= recipe.thumbs_down_total %>
         </div>
       </div>
-    </div>
-    <div class="col-md-2">
-      <%= image_tag(recipe.image, size: "150x100") if recipe.image.attached? %>
     </div>
   </div>
   
