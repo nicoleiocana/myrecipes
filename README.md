@@ -71,7 +71,7 @@ $ rails s
 
 Desktop:
 
-![desktop myrecipes](https://i.imgur.com/vA4AwMi.png)
+![desktop myrecipes](https://i.imgur.com/DpE85T8.png)
 
 Mobile:
 
