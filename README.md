@@ -39,7 +39,7 @@ There are notable modifications that distinguish my My Recipes application from 
 
 1\. Clone the repo.
 
-![clone repo](https://i.imgur.com/VQSm78b.png)
+![clone repo](https://i.imgur.com/z7enHGH.png)
 
 2\. Install the needed gems:
 
