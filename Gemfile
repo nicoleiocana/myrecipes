@@ -5,7 +5,7 @@ ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
-gem 'image_processing', '~> 1.10', '>= 1.10.3'
+gem 'image_processing', '~> 1.12'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'active_storage_validations', '~> 0.8.8'
 gem 'bootstrap-sass', '~> 3.4.1'
